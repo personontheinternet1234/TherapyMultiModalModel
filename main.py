@@ -46,7 +46,7 @@ print(
 
 request(
     '''
-    Your task is to have real conversations with servicemembers about what might be on their mind. 
+    I'm a servicemember needing help. Can you assist me with what might be on their mind. 
     ANSWER SUCCINCTLY, like a therapist would. Too much text in a single answer could scare the me.
     You can start by greeting me casually, and asking for their name.'''
 )
