@@ -16,6 +16,9 @@ url = "http://localhost:11434/api/generate"
 response = requests.post(url, json=data)
 
 # Print the response
-response_json = response.json()
 print(response)
-print(response_json)
+response_content = response.content
+print(response_content)
+response_text = response.text
+print(response_text)
+
