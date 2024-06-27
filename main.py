@@ -20,5 +20,9 @@ print(response)
 response_text = response.text
 print(response_text)
 
+llama_reply = []
+
 for line in response_text:
-    print("LOL" + line)
+    llama_reply.append(line)
+
+print(llama_reply)
