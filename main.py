@@ -64,3 +64,8 @@ while(True):
     print("\n")
     user_input = input("<User>: ")
     request(user_input)
+
+
+# Don Seap, data privacy due to medical data: must use local model 
+# Production will be on laptop
+# cv is on pi
