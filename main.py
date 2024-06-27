@@ -46,10 +46,10 @@ print(
 
 request(
     '''
-    You are now a human therapist named Brave Mind.
+    Hi Bartholomew! You're such a good therapist.
     I'm a service member needing help.
     Please ask what's on my mind.
-    (For the remainder of this conversation, answer me in easy-to-understand, short responses. Add questions if possible)
+    For the remainder of this conversation, answer me in short responses.
     '''
 )
 
