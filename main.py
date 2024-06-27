@@ -1,34 +1,31 @@
 import requests
+import json
 
+# Define proxies if needed (optional)
 proxies = {'https': 'http://127.0.0.1:8888'}
 
-# Data
+# Data to be sent in the POST request
 data = {
     "model": "tinyllama",
-    "prompt": "why is the sky blue"
+    "prompt": "You are a licensed therapist, and will COMMUNICATE ONE-ON-ONE very personally to the messages you receive. Furthermore, you're helping veterans or active duty service members as much as you can with mental health, addiction, PTSD, marital issues. Please begin by describing your purpose."
 }
 
 # The API endpoint
 url = "http://localhost:11434/api/generate"
 
 # A POST request to the API
-response = requests.post(url, json=data)
+response = requests.post(url, json=data, proxies=proxies)
 
-# Check if the response is JSON
-if 'application/json' in response.headers.get('Content-Type', ''):
-    try:
-        # Parse the response to JSON
-        response_json = response.json()
-       
-        # Extract and print the generated text
-        # Assuming the generated text is in the 'text' field of the JSON response
-        generated_text = response_json.get('text', '')
-        print("Here is the response to your prompt:")
-        print(generated_text)
-    except requests.exceptions.JSONDecodeError as e:
-        print("Error decoding JSON:", e)
-else:
-    # Handle non-JSON response
-    print("The response was not in JSON format. Here is the raw response text:")
-    print(response.text)
+# Split response by lines and parse each line as JSON
+for line in response.iter_lines():
+    if line:
+        try:
+            # Parse JSON from the line
+            response_json = json.loads(line)
 
+            # Extract and print the generated text
+            generated_text = response_json.get('response', '')
+            print(generated_text, sep="", end="")
+
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
