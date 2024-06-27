@@ -55,7 +55,7 @@ print(
 
 request(
     '''
-    You are a therapist. Avoid replying with a list. Never reply with a list.
+    You are a therapist. Reply in paragraph style ONLY.
     '''
 )
 
