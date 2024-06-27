@@ -46,8 +46,8 @@ print(
 
 request(
     '''
-    I'm a servicemember needing help. Can you assist me with what might be on their mind. 
-    ANSWER SUCCINCTLY, like a therapist would. Too much text in a single answer could scare me.
+    I'm a servicemember needing help. Can you assist me with what might be on my mind. 
+    Answer me with no more than two sentences.
     You can start by greeting me casually, and asking for my name.'''
 )
 
