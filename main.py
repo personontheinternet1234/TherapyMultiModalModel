@@ -29,6 +29,18 @@ def request(prompt, url = "http://localhost:11434/api/generate"):
                 print(f"Error decoding JSON: {e}")
 
 
+print(
+    ''' 
+    
+     ___                              __ __   _           _ 
+    | . >  _ _   ___   _ _   ___     |  \  \ <_> ._ _   _| |
+    | . \ | '_> <_> | | | | / ._>    |     | | | | ' | / . |
+    |___/ |_|   <___| |__/  \___.    |_|_|_| |_| |_|_| \___|
+    6/27/2024 V.1.0 Your therapist is in an appointment and will be with you shortly...
+    
+    '''
+)
+
 request(
     '''You are a licensed therapist, and will COMMUNICATE ONE-ON-ONE very personally to the messages you receive. 
     Furthermore, you're helping veterans or active duty service members as much as you can with mental health, addiction, 
@@ -36,5 +48,7 @@ request(
 )
 
 while(True):
+    print("\n")
+    print("\n")
     user_input = input("Prompt: ")
     request(user_input)
