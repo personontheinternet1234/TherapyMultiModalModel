@@ -3,17 +3,18 @@ import requests
 
 proxies = {'https': 'http://127.0.0.1:8888'}
 
-payload = {
-"model": "tinyllama",
-"prompt": "test"
+# Data
+data = {
+    "model": "tinyllama",
+    "prompt": "why is the sky blue"
 }
 
 # The API endpoint
 url = "http://localhost:11434/api/generate"
 
-# A GET request to the API
-response = requests.get(url, params=payload)
+# A POST request to tthe API
+response = requests.post(url, json=data)
 
 # Print the response
 response_json = response
-# print(response_json)
+print(response_json)
