@@ -2,7 +2,7 @@ import tensorflow as tf
 import requests
 
 # The API endpoint
-url = "https://localhost:11434/api/generate"
+url = "http://localhost:11434/api/generate"
 
 # A GET request to the API
 response = requests.get(url)
