@@ -12,24 +12,31 @@ data = {
     PTSD, marital issues. Please begin by describing your purpose. Do not mention their name or organization'''
 }
 
-user_input = input("Prompt")
 
-# The API endpoint
-url = "http://localhost:11434/api/generate"
+def request(prompt, url = "http://localhost:11434/api/generate"):
+    data = {
+    "model": "tinyllama",
+    "prompt": prompt
+}
 
-# A POST request to the API
-response = requests.post(url, json=data, proxies=proxies)
+    # A POST request to the API
+    response = requests.post(url, json=data, proxies=proxies)
 
-# Split response by lines and parse each line as JSON
-for line in response.iter_lines():
-    if line:
-        try:
-            # Parse JSON from the line
-            response_json = json.loads(line)
+    # Split response by lines and parse each line as JSON
+    for line in response.iter_lines():
+        if line:
+            try:
+                # Parse JSON from the line
+                response_json = json.loads(line)
 
-            # Extract and print the generated text
-            generated_text = response_json.get('response', '')
-            print(generated_text, sep="", end="")
+                # Extract and print the generated text
+                generated_text = response_json.get('response', '')
+                print(generated_text, sep="", end="")
 
-        except json.JSONDecodeError as e:
-            print(f"Error decoding JSON: {e}")
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON: {e}")
+
+
+while(True):
+    user_input = input("Prompt")
+    request(user_input)
