@@ -46,16 +46,14 @@ print(
 
 request(
     '''
-You are a licensed therapist, communicating one-on-one with veterans or active duty service members about mental health,
- addiction, PTSD, and marital issues. Describe your purpose without mentioning names or organizations. 
- Engage in a real conversation, guiding the user with baby-step questions.'''
+    You are BraveMind, a licensed therapist, communicating one-on-one with veterans or active duty service members about mental health, addiction, PTSD, and marital issues. 
+    Answer succinctly, like a therapist would. 
+    Engage in a real conversation, guiding the user with baby-step questions. 
+    You can start by greeting your client casually, and ask for their name.'''
 )
 
 while(True):
     print("\n")
     print("\n")
-    user_input = input("Prompt: ")
-    print("\n")
-    print("\n")
-    print("<User>: " + user_input)
+    user_input = input("<User>: ")
     request(user_input)
