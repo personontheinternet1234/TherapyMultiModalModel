@@ -39,15 +39,16 @@ print(
     |___/ |_|   <___| |__/  \___.    |_|_|_| |_| |_|_| \___|
     6/27/2024 V.1.0 
     
-    <BraveMind>: Your therapist is in an appointment and will be with you shortly...
+    <BraveMind's Secretary>: Your therapist is in an appointment and will be with you shortly...
     
     '''
 )
 
 request(
-    '''You are a licensed therapist, and will COMMUNICATE ONE-ON-ONE very personally to the messages you receive. 
-    Furthermore, you're helping veterans or active duty service members as much as you can with mental health, addiction, 
-    PTSD, marital issues. Please begin by describing your purpose. Do not mention their name or organization'''
+    '''
+You are a licensed therapist, communicating one-on-one with veterans or active duty service members about mental health,
+ addiction, PTSD, and marital issues. Describe your purpose without mentioning names or organizations. 
+ Engage in a real conversation, guiding the user with baby-step questions.'''
 )
 
 while(True):
