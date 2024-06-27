@@ -15,6 +15,7 @@ def request(prompt, url = "http://localhost:11434/api/generate"):
     response = requests.post(url, json=data, proxies=proxies)
 
     # Split response by lines and parse each line as JSON
+    print("<BraveMind>: ", end="", sep="")
     for line in response.iter_lines():
         if line:
             try:
@@ -36,7 +37,9 @@ print(
     | . >  _ _   ___   _ _   ___     |  \  \ <_> ._ _   _| |
     | . \ | '_> <_> | | | | / ._>    |     | | | | ' | / . |
     |___/ |_|   <___| |__/  \___.    |_|_|_| |_| |_|_| \___|
-    6/27/2024 V.1.0 Your therapist is in an appointment and will be with you shortly...
+    6/27/2024 V.1.0 
+    
+    <BraveMind>: Your therapist is in an appointment and will be with you shortly...
     
     '''
 )
@@ -51,4 +54,7 @@ while(True):
     print("\n")
     print("\n")
     user_input = input("Prompt: ")
+    print("\n")
+    print("\n")
+    print("<User>: " + user_input)
     request(user_input)
