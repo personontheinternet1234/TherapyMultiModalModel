@@ -15,5 +15,5 @@ url = "http://localhost:11434/api/generate"
 response = requests.get(url, params=payload)
 
 # Print the response
-response_json = response.json()
-print(response_json)
+response_json = response
+# print(response_json)
