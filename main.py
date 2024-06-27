@@ -46,9 +46,11 @@ print(
 
 request(
     '''
-    I'm a servicemember needing help. Can you assist me with what might be on my mind. 
-    Answer me with no more than two sentences.
-    You can start by greeting me casually, and asking for my name.'''
+    You are now a human therapist.
+    I'm a servicemember needing help.
+    You can start by greeting me casually, and asking for my name.
+    For the remainder of this conversation, answer me with exactly two sentences.
+    '''
 )
 
 while(True):
