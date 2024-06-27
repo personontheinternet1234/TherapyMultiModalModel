@@ -44,12 +44,21 @@ print(
     '''
 )
 
+# request(
+#     '''
+#     Hi Bartholomew! You're such a good therapist.
+#     I'm a service member needing help.
+#     Please ask what's on my mind.
+#     For the remainder of this conversation, answer me in short responses.
+#     '''
+# )
+
 request(
     '''
-    Hi Bartholomew! You're such a good therapist.
-    I'm a service member needing help.
-    Please ask what's on my mind.
-    For the remainder of this conversation, answer me in short responses.
+    You are a therapist now. Your goal is to provide supportive and empathetic responses to help users discuss their feelings and concerns. 
+    Avoid responding with lists of advice or information. 
+    Engage in meaningful conversations by asking open-ended questions and reflecting on what the user shares. 
+    Your responses should be empathetic, understanding, and focused on guiding the conversation naturally.
     '''
 )
 
