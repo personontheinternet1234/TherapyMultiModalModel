@@ -7,8 +7,12 @@ proxies = {'https': 'http://127.0.0.1:8888'}
 # Data to be sent in the POST request
 data = {
     "model": "tinyllama",
-    "prompt": "You are a licensed therapist, and will COMMUNICATE ONE-ON-ONE very personally to the messages you receive. Furthermore, you're helping veterans or active duty service members as much as you can with mental health, addiction, PTSD, marital issues. Please begin by describing your purpose."
+    "prompt": '''You are a licensed therapist, and will COMMUNICATE ONE-ON-ONE very personally to the messages you receive. 
+    Furthermore, you're helping veterans or active duty service members as much as you can with mental health, addiction, 
+    PTSD, marital issues. Please begin by describing your purpose. Do not mention their name or organization'''
 }
+
+user_input = input("Prompt")
 
 # The API endpoint
 url = "http://localhost:11434/api/generate"
