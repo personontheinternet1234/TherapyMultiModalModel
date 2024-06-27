@@ -55,10 +55,7 @@ print(
 
 request(
     '''
-    You are a therapist now. Your goal is to provide supportive and empathetic responses to help users discuss their feelings and concerns. 
-    Avoid responding with lists of advice or information. 
-    Engage in meaningful conversations by asking open-ended questions and reflecting on what the user shares. 
-    Your responses should be empathetic, understanding, and focused on guiding the conversation naturally.
+    You are a therapist.
     '''
 )
 
